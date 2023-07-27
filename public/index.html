@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="wmre-html">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TC9Q78');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8" />
+    <title>%REACT_APP_TITLE% - West Midlands Rail Executive</title>
+    <meta name="description" content="%REACT_APP_DESCRIPTION%" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="https://wmre.org.uk/media/jgwpww5m/favicon.png" />
+
+    <meta name="theme-color" content="#169586" />
+
+    <!-- SEO Metadata  -->
+    <meta name="title" content="%REACT_APP_TITLE%" />
+    <meta name="description" content="%REACT_APP_DESCRIPTION%" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="%PUBLIC_URL%" />
+    <meta property="og:title" content="%REACT_APP_TITLE%" />
+    <meta property="og:description" content="%REACT_APP_DESCRIPTION%" />
+    <meta
+      property="og:image"
+      content="https://cloudcdn.wmca.org.uk/wmreassets/ds/@%REACT_APP_DS_VERSION%/build/config/wmca-share.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="%PUBLIC_URL%" />
+    <meta property="twitter:title" content="%REACT_APP_TITLE%" />
+    <meta property="twitter:description" content="%REACT_APP_DESCRIPTION%" />
+    <meta
+      property="twitter:image"
+      content="https://cloudcdn.wmca.org.uk/wmreassets/ds/@%REACT_APP_DS_VERSION%/build/config/wmca-share.png"
+    />
+
+    <!-- wmre design system CSS -->
+    <link rel="stylesheet" href="https://wmre.org.uk/css/wmre-ds.css" />
+  </head>
+
+  <body class="wmre-body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TC9Q78"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Skip to content link -->
+    <a
+      href="#wmre-main-content"
+      title="Skip to main content"
+      target="_self"
+      class="wmre-link wmre-header__skip-link"
+      >Skip to main content</a
+    >
+
+    <!-- Start app here -->
+    <main id="wmre-main-content" class="wmre-container--main">
+      <div id="root"></div>
+    </main>
+    <!-- End app -->
+
+    <!-- Footer -->
+    <footer class="wmre-footer wmre-footer--v2">
+      <div class="wmre-container">
+        <div class="wmre-footer__bottom wmre-grid">
+          <div class="wmre-col-1 wmre-col-md-1-3 wmre-col-lg-1-2">
+            <p class="wmre-footer__copyright">
+              &COPY; West Midlands Rail Executive <span id="year"></span>
+            </p>
+          </div>
+          <div class="wmre-col-1 wmre-col-md-2-3 wmre-col-lg-1-2">
+            <ul class="wmre-footer__bottom-menu">
+              <li><a class="wmre-footer__link" href="https://wmre.org.uk/privacy-statement/">Privacy Statement</a></li>
+              <li>
+                <a class="wmre-footer__link" href="https://wmre.org.uk/terms-and-conditions/">Terms and Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- Ajax SVG in, SVGS are referenced in app (Icon component) -->
+    <!-- Ajax SVGs from wmca Design System -->
+    <script>
+      const ajax = new XMLHttpRequest();
+      ajax.open('GET', 'https://wmre.org.uk/img/wmre-sprite.min.svg', true);
+      ajax.send();
+      ajax.onload = function () {
+        const div = document.createElement('div');
+        div.style.display = 'none';
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+      };
+
+      const d = new Date();
+      let year = d.getFullYear();
+      document.getElementById('year').innerHTML = year;
+    </script>
+  </body>
+</html>

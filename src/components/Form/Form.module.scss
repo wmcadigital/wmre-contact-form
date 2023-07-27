@@ -1,0 +1,17 @@
+@import '~assets/styles/vars';
+
+.formWrapper {
+  background-color: $white;
+
+  @media all and (max-width: 767px) {
+    margin: 0 -0.75rem;
+  }
+}
+
+.wmcadsMlxxl {
+  margin-left: 3.8rem;
+}
+
+th {
+  text-align: left;
+}
