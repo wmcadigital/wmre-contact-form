@@ -2,7 +2,6 @@
   "name": "wmre-contact-us",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wmre.org.uk/contact-form/",
   "author": "WMCA",
   "main": "src/index.js",
   "repository": "https://github.com/wmcadigital/wmre-contact-us",
@@ -14,7 +13,7 @@
     "start": "react-app-rewired --openssl-legacy-provider start",
     "lint:styles": "sass-lint '**/*.scss'",
     "update-packages": "ncu",
-    "build": "react-app-rewired build",
+    "build": "react-app-rewired --openssl-legacy-provider build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
